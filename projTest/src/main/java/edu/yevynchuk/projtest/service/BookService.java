@@ -34,7 +34,27 @@ public class BookService {
         bookRepository.saveAll(books);
     }
 
-    public List<Book> getBooks() {
+
+
+    // CRUD
+    public List<Book> getAll() {
         return bookRepository.findAll();
     }
+
+    public Book getById(String id) {
+        return bookRepository.findById(id).orElse(null);
+    }
+
+    public Book create(Book book) {
+        return bookRepository.save(book);
+    }
+
+    public Book update(Book book) {
+        return bookRepository.save(book);
+    }
+
+    public void delById(String id) {
+        bookRepository.deleteById(id);
+    }
+
 }
