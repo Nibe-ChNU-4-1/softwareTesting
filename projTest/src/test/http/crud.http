@@ -1,0 +1,65 @@
+### GET all
+GET http://localhost:8080/api/v1/books/
+
+### GET first one
+GET http://localhost:8080/api/v1/books/1
+
+### DELETE third one
+DELETE http://localhost:8080/api/v1/books/3
+
+### CREATE one
+POST http://localhost:8080/api/v1/books/
+Content-Type: application/json
+
+{
+  "title": "test",
+  "code": "000000",
+  "description": "test"
+}
+
+### UPDATE one
+PUT http://localhost:8080/api/v1/books/
+Content-Type: application/json
+
+{
+  "id": "1",
+  "title": "The Testing",
+  "code": "000008",
+  "description": "A fantasy novel by J.R.R. Tolkien"
+}
+
+### GET second one
+GET http://localhost:8080/api/v1/books/2
+
+
+### DELETE second one
+DELETE http://localhost:8080/api/v1/books/2
+
+
+### CREATE another book
+POST http://localhost:8080/api/v1/books/
+Content-Type: application/json
+
+{
+  "title": "Another Test Book",
+  "code": "000009",
+  "description": "Just another test book"
+}
+
+
+### UPDATE third book's description
+PUT http://localhost:8080/api/v1/books/
+Content-Type: application/json
+
+{
+  "id": "3",
+  "title": "Existing Book",
+  "code": "000003",
+  "description": "Updated description for the third book"
+}
+
+
+### GET non-existent book
+GET http://localhost:8080/api/v1/books/999
+
+

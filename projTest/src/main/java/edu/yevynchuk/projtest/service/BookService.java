@@ -31,6 +31,7 @@ public class BookService {
 
   //  @PostConstruct
     void init() {
+        bookRepository.deleteAll();
         bookRepository.saveAll(books);
     }
 

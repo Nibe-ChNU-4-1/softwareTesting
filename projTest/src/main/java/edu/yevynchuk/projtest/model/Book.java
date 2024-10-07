@@ -23,7 +23,7 @@ import java.util.Objects;
 public class Book {
     private String id;
     private String title;
-    private String code; // Серійний номер
+    private String code;
     private String description;
 
     public Book(String title, String code, String description) {
